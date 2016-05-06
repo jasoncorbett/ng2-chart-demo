@@ -6,8 +6,15 @@ import {CHART_DIRECTIVES} from '../../charts';
   templateUrl: 'build/pages/page1/page1.html',
   directives: [CHART_DIRECTIVES]
 })
-export class Page1 {
+export class BuildReport {
+  private project: string;
+  private release: string;
+  private build: string;
+
   constructor() {
+    this.project = "Panel";
+    this.release = "3.4.0";
+    this.build = "17153";
   }
   private barChartOptions = {
     scaleShowVerticalLines: false,

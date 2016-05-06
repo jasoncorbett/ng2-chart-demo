@@ -19,7 +19,7 @@ export class ChartsComponent {}
     'data',
     'labels',
     'series',
-    'colours',
+    'colors',
     'chartType',
     'legend',
     'options'
@@ -36,7 +36,7 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   @Input() public options:any = {responsive: true};
   @Input() public chartType:string;
   @Input() public series:Array<any> = [];
-  @Input() public colours:Array<any> = [];
+  @Input() public colors:Array<any> = [];
   @Input() public legend:boolean;
 
   private ctx:any;
@@ -260,7 +260,7 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
 
     for (let i = 0; i < this.data.length; i++) {
       let colourDesc:Array<number> = [this.getRandomInt(0, 255), this.getRandomInt(0, 255), this.getRandomInt(0, 255)];
-      let colour = i < this.colours.length ? this.colours[i] : this.defaultsColours[i] || this.getColour(colourDesc);
+      let colour = i < this.colors.length ? this.colors[i] : this.defaultsColours[i] || this.getColour(colourDesc);
 
       let data:any = Object.assign(colour,
         this.getDataObject(this.series[i] || this.labels[i], this.data[i]));
