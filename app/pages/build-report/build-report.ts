@@ -3,7 +3,7 @@ import {CHART_DIRECTIVES} from '../../charts';
 
 
 @Page({
-  templateUrl: 'build/pages/page1/page1.html',
+  templateUrl: 'build/pages/build-report/build-report.html',
   directives: [CHART_DIRECTIVES]
 })
 export class BuildReport {
@@ -16,6 +16,12 @@ export class BuildReport {
     this.release = "3.4.0";
     this.build = "17153";
   }
+  private pieChartLabels = ['PASS', 'FAIL'];
+  private pieChartData = [436, 338];
+  private pieChartOptions = {
+    responsive: true
+  };
+  
   private barChartOptions = {
     scaleShowVerticalLines: false,
     scales: {

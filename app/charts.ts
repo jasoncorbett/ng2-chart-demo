@@ -202,7 +202,6 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public getChartBuilder(ctx:any, data:Array<any>, options:any):any {
-    console.log(data);
     return new Chart(ctx, {
       type: this.chartType,
       data: data, 
@@ -234,20 +233,10 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public getChartData(labels:any, dataObject:any):any {
-    if (this.chartType === 'line'
-      || this.chartType === 'bar'
-      || this.chartType === 'horizontalBar'
-      || this.chartType === 'radar') {
       return {
         labels: labels,
         datasets: dataObject
       };
-    }
-    if (this.chartType === 'pie'
-      || this.chartType === 'doughnut'
-      || this.chartType === 'polarArea') {
-      return dataObject;
-    }
   }
 
   private refresh():any {
@@ -258,17 +247,38 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
     this.ngOnDestroy();
     let dataset:Array<any> = [];
 
-    for (let i = 0; i < this.data.length; i++) {
-      let colourDesc:Array<number> = [this.getRandomInt(0, 255), this.getRandomInt(0, 255), this.getRandomInt(0, 255)];
-      let colour = i < this.colors.length ? this.colors[i] : this.defaultsColours[i] || this.getColour(colourDesc);
+    if (this.chartType === 'pie'
+        || this.chartType === 'doughnut'
+        || this.chartType === 'polarArea') {
+      let dataItem = {
+        data: this.data
+      };
+      for(let i = 0; i < this.data.length; i++) {
+        for(var colorProp in this.defaultsColours[i]) {
+          if(colorProp in dataItem) {
+            (dataItem[colorProp]).push(this.defaultsColours[i][colorProp]);
+          } else {
+            dataItem[colorProp] = [this.defaultsColours[i][colorProp]];
+          }
+        }
+      }
 
-      let data:any = Object.assign(colour,
-        this.getDataObject(this.series[i] || this.labels[i], this.data[i]));
+      dataset.push(dataItem);
 
-      dataset.push(data);
+    } else {
+      for (let i = 0; i < this.data.length; i++) {
+        let colourDesc:Array<number> = [this.getRandomInt(0, 255), this.getRandomInt(0, 255), this.getRandomInt(0, 255)];
+        let colour = i < this.colors.length ? this.colors[i] : this.defaultsColours[i] || this.getColour(colourDesc);
+
+        let data:any = Object.assign(colour,
+            this.getDataObject(this.series[i] || this.labels[i], this.data[i]));
+
+        dataset.push(data);
+      }
     }
 
     let data:any = this.getChartData(this.labels, dataset);
+    console.log(data);
     this.chart = this.getChartBuilder(this.ctx, data, this.options);
 
     if (this.legend) {

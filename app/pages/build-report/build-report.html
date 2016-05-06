@@ -3,11 +3,22 @@
 </ion-navbar>
 
 <ion-content padding class="page1">
-      <base-chart class="chart"
-                  [data]="barChartData"
-                  [labels]="barChartLabels"
-                  [options]="barChartOptions"
-                  [series]="barChartSeries"
-                  [legend]="barChartLegend"
-                  [chartType]="barChartType"></base-chart>
+    <ion-row>
+        <ion-col width-33>
+            <base-chart class="chart pie-chart"
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [options]="pieChartOptions"
+                        chartType="pie"></base-chart>
+
+        </ion-col>
+        <ion-col width-66>
+            <base-chart class="chart"
+                        [data]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [series]="barChartSeries"
+                        [chartType]="barChartType"></base-chart>
+        </ion-col>
+    </ion-row>
 </ion-content>
