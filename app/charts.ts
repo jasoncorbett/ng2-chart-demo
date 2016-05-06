@@ -49,26 +49,29 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   private chartHover:EventEmitter<any> = new EventEmitter();
   private defaultsColours:Array<any> = [
     {
-      fillColor: 'rgba(151,187,205,0.2)',
-      strokeColor: 'rgba(151,187,205,1)',
-      pointColor: 'rgba(151,187,205,1)',
+      backgroundColor: 'rgba(0,176,0,1)',
+      borderColor: 'rgba(0,126,0,1)',
+      borderWidth: 1,
+      pointColor: 'rgba(0,176,0,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(151,187,205,0.8)',
-      color: 'rgba(151,187,205,1)',
-      highlight: 'rgba(151,187,205,0.8)'
+      pointHighlightStroke: 'rgba(0,176,0,0.8)',
+      color: 'rgba(0,176,0,1)',
+      highlight: 'rgba(0,176,0,0.8)'
     }, {
-      fillColor: 'rgba(220,220,220,0.2)',
-      strokeColor: 'rgba(220,220,220,1)',
-      pointColor: 'rgba(220,220,220,1)',
+      backgroundColor: 'rgba(255,0,0,1)',
+      borderColor: 'rgba(225,0,0,1)',
+      borderWidth: 1,
+      pointColor: 'rgba(255,0,0,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(220,220,220,0.8)',
-      color: 'rgba(220,220,220,1)',
-      highlight: 'rgba(220,220,220,0.8)'
+      pointHighlightStroke: 'rgba(255,0,0,0.8)',
+      color: 'rgba(255,0,0,1)',
+      highlight: 'rgba(255,0,0,0.8)'
     }, {
-      fillColor: 'rgba(247,70,74,0.2)',
-      strokeColor: 'rgba(247,70,74,1)',
+      backgroundColor: 'rgba(247,70,74,0.8)',
+      borderColor: 'rgba(247,70,74,1)',
+      borderWidth: 1,
       pointColor: 'rgba(247,70,74,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -76,8 +79,9 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(247,70,74,1)',
       highlight: 'rgba(247,70,74,0.8)'
     }, {
-      fillColor: 'rgba(70,191,189,0.2)',
-      strokeColor: 'rgba(70,191,189,1)',
+      backgroundColor: 'rgba(70,191,189,0.8)',
+      borderColor: 'rgba(70,191,189,1)',
+      borderWidth: 1,
       pointColor: 'rgba(70,191,189,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -85,8 +89,9 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(70,191,189,1)',
       highlight: 'rgba(70,191,189,0.8)'
     }, {
-      fillColor: 'rgba(253,180,92,0.2)',
-      strokeColor: 'rgba(253,180,92,1)',
+      backgroundColor: 'rgba(253,180,92,0.8)',
+      borderColor: 'rgba(253,180,92,1)',
+      borderWidth: 1,
       pointColor: 'rgba(253,180,92,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -94,8 +99,9 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(253,180,92,1)',
       highlight: 'rgba(253,180,92,0.8)'
     }, {
-      fillColor: 'rgba(148,159,177,0.2)',
-      strokeColor: 'rgba(148,159,177,1)',
+      backgroundColor: 'rgba(148,159,177,0.8)',
+      borderColor: 'rgba(148,159,177,1)',
+      borderWidth: 1,
       pointColor: 'rgba(148,159,177,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -103,8 +109,9 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(148,159,177,1)',
       highlight: 'rgba(148,159,177,0.8)'
     }, {
-      fillColor: 'rgba(77,83,96,0.2)',
-      strokeColor: 'rgba(77,83,96,1)',
+      backgroundColor: 'rgba(77,83,96,0.8)',
+      borderColor: 'rgba(77,83,96,1)',
+      borderWidth: 1,
       pointColor: 'rgba(77,83,96,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -155,8 +162,9 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
 
   public getColour(colour:Array<number>):any {
     return {
-      fillColor: this.rgba(colour, 0.2),
-      strokeColor: this.rgba(colour, 1),
+      backgroundColor: this.rgba(colour, 0.6),
+      borderColor: this.rgba(colour, 1),
+      borderWidth: 1,
       pointColor: this.rgba(colour, 1),
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
@@ -194,6 +202,7 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public getChartBuilder(ctx:any, data:Array<any>, options:any):any {
+    console.log(data);
     return new Chart(ctx, {
       type: this.chartType,
       data: data, 
@@ -204,7 +213,7 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   public getDataObject(label:string, value:any):any {
     if (this.chartType === 'line'
       || this.chartType === 'bar'
-      || this.chartType === 'horizontalBar'
+       || this.chartType === 'horizontalBar'
       || this.chartType === 'radar') {
       return {
         label: label,

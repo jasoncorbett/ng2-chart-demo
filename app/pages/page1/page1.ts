@@ -22,8 +22,15 @@ export class Page1 {
     responsive: true,
     stacked: true
   };
-  private barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  private barChartSeries = ['Series A', 'Series B'];
+  private barChartLabels = [
+    'Panel Defaults Level 2',
+    'Camera defaults using gui for Ping',
+    'Camera defaults using gui for 520',
+    'Camera defaults using gui for Doorbell v1',
+    'Security Core BATs',
+    'Security Core Level 1',
+    'Security Core Level 2'];
+  private barChartSeries = ['PASS', 'FAIL'];
   public barChartType = 'horizontalBar';
   private barChartLegend:boolean = true;
 
