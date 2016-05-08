@@ -1,24 +1,37 @@
-<ion-navbar *navbar>
-  <ion-title>Build Report for {{project}} {{release}} build {{build}}</ion-title>
-</ion-navbar>
+<ion-content padding class="build-report">
+    <div class="build-report-inner">
+        <ion-row responsive-sm>
+            <ion-col>
+                <h1>Build Report for {{project}}</h1>
+                <h2>{{release}} build {{build}}</h2>
+            </ion-col>
+            <ion-col text-right>
+                <span class="build-report-time">{{startTime}}</span><br />
+                <span class="build-report-time">{{endTime}}</span>
+            </ion-col>
+        </ion-row>
+        <ion-row responsive-sm class="build-report-charts">
+            <ion-col width-33>
+                <base-chart class="chart pie-chart"
+                            [data]="pieChartData"
+                            [labels]="pieChartLabels"
+                            [options]="pieChartOptions"
+                            chartType="pie"></base-chart>
 
-<ion-content padding class="page1">
-    <ion-row responsive-sm>
-        <ion-col width-33>
-            <base-chart class="chart pie-chart"
-                        [data]="pieChartData"
-                        [labels]="pieChartLabels"
-                        [options]="pieChartOptions"
-                        chartType="pie"></base-chart>
-
-        </ion-col>
-        <ion-col width-66>
-            <base-chart class="chart"
-                        [data]="barChartData"
-                        [labels]="barChartLabels"
-                        [options]="barChartOptions"
-                        [series]="barChartSeries"
-                        [chartType]="barChartType"></base-chart>
-        </ion-col>
-    </ion-row>
+            </ion-col>
+            <ion-col width-66>
+                <base-chart class="chart"
+                            [data]="barChartData"
+                            [labels]="barChartLabels"
+                            [options]="barChartOptions"
+                            [series]="barChartSeries"
+                            [chartType]="barChartType"></base-chart>
+            </ion-col>
+        </ion-row>
+        <ion-row class="build-report-footer">
+            <ion-col width-50><span class="build-report-time">{{duration}}</span></ion-col>
+            <ion-col width-50 text-right><img src="images/slick.jpg"></ion-col>
+        </ion-row>
+    </div>
 </ion-content>
+

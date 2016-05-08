@@ -10,6 +10,9 @@ export class BuildReport {
   private project: string;
   private release: string;
   private build: string;
+  private duration: string;
+  private startTime: string;
+  private endTime: string;
 
   constructor(platform: Platform) {
     if(platform.is("mobile")) {
@@ -20,6 +23,9 @@ export class BuildReport {
     this.project = "Panel";
     this.release = "3.4.0";
     this.build = "17153";
+    this.duration = "2 hrs 5 min";
+    this.startTime = "May 7 at 7:02PM"
+    this.endTime = "May 7 at 9:07PM"
   }
   private pieChartLabels = ['PASS', 'FAIL'];
   private pieChartData = [436, 338];
