@@ -1,0 +1,711 @@
+{
+    "created": 1462563828543,
+    "groupSummary": {
+        "resultsByStatus": {
+            "BROKEN_TEST": 2,
+            "FAIL": 7,
+            "NOT_TESTED": 0,
+            "NO_RESULT": 0,
+            "PASS": 261,
+            "SKIPPED": 0
+        },
+        "statusListOrdered": [
+            "PASS",
+            "FAIL",
+            "BROKEN_TEST"
+        ],
+        "total": 270,
+        "totalTime": 0
+    },
+    "grouptype": "PARALLEL",
+    "name": "Build Report for Platform 2016-05-11 Build 1394",
+    "state": "FINISHED",
+    "testruns": [
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462588925000,
+            "files": [],
+            "id": "572d55fd0a6f039632838df4",
+            "info": "crapi template test",
+            "name": "Platform Regression platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462589614166,
+            "runStarted": 1462588925000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 18,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 19,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "561594290a6f0316b7062e8f",
+                "isprivate": false,
+                "name": "Platform Regression platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "561594290a6f0316b7062e8f"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462587752376,
+            "files": [],
+            "id": "572d51680a6f03962ff38e96",
+            "name": "Rule Notification using panel version 2.3 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462588889338,
+            "runStarted": 1462587752000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 1,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 45,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "BROKEN_TEST"
+                ],
+                "total": 46,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "5702ee2e0a6f03963b849ab5",
+                "isprivate": false,
+                "name": "Rule Notification using panel version 2.3 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "5702ee2e0a6f03963b849ab5"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462587478243,
+            "files": [],
+            "id": "572d50560a6f0396382d15c0",
+            "name": "ZWave Device Test using panel version 2.3 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462587715547,
+            "runStarted": 1462587478000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 17,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS"
+                ],
+                "total": 17,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db92f70a6f03f62626d6d9",
+                "isprivate": false,
+                "name": "ZWave Device Test using panel version 2.3 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db92f70a6f03f62626d6d9"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462587217893,
+            "files": [],
+            "id": "572d4f520a6f0396382d15b7",
+            "name": "ZWave Device Test using panel version 2.2 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462587438066,
+            "runStarted": 1462587217000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 17,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS"
+                ],
+                "total": 17,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db92b50a6f03f61f9f1902",
+                "isprivate": false,
+                "name": "ZWave Device Test using panel version 2.2 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db92b50a6f03f61f9f1902"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462586973443,
+            "files": [],
+            "id": "572d4e5d0a6f039630435fab",
+            "name": "ZWave Device Test using panel version 2.0 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462587176063,
+            "runStarted": 1462586973000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 17,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS"
+                ],
+                "total": 17,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db91530a6f03f61ca125a0",
+                "isprivate": false,
+                "name": "ZWave Device Test using panel version 2.0 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db91530a6f03f61ca125a0"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462586592539,
+            "files": [],
+            "id": "572d4ce10a6f03962ff38e68",
+            "name": "ZWave Device Test using panel version 1.1.2 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462586932344,
+            "runStarted": 1462586592000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 17,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS"
+                ],
+                "total": 17,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db88860a6f03f62509fc12",
+                "isprivate": false,
+                "name": "ZWave Device Test using panel version 1.1.2 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db88860a6f03f62509fc12"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462586281869,
+            "files": [],
+            "id": "572d4baa0a6f03963b84e884",
+            "name": "ZWave Device Test using panel version 1.1.1 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462586551055,
+            "runStarted": 1462586281000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 0,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 17,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS"
+                ],
+                "total": 17,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db8e8e0a6f03f618715738",
+                "isprivate": false,
+                "name": "ZWave Device Test using panel version 1.1.1 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db8e8e0a6f03f618715738"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585451027,
+            "files": [],
+            "id": "572d486b0a6f0396337abb39",
+            "name": "Smoke Test using panel version 3.1 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462586232455,
+            "runStarted": 1462585451000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 19,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "56e9a3580a6f03bc04b2805e",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 3.1 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "56e9a3580a6f03bc04b2805e"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585448826,
+            "files": [],
+            "id": "572d48690a6f039637d98ee8",
+            "name": "Smoke Test using panel version 2.0 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462585945555,
+            "runStarted": 1462585448000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 1,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 18,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL",
+                    "BROKEN_TEST"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db717f0a6f03f62509fafd",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 2.0 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db717f0a6f03f62509fafd"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585448626,
+            "files": [],
+            "id": "572d48680a6f03963a649eed",
+            "name": "Smoke Test using panel version 2.2 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462585949466,
+            "runStarted": 1462585448000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 19,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db717c0a6f03f62626d516",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 2.2 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db717c0a6f03f62626d516"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585448603,
+            "files": [],
+            "id": "572d48680a6f039637d98ee6",
+            "name": "Smoke Test using panel version 2.3 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462585960863,
+            "runStarted": 1462585448000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 19,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db717e0a6f03f6176a1c79",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 2.3 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db717e0a6f03f6176a1c79"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585448451,
+            "files": [],
+            "id": "572d48690a6f03963657ddf4",
+            "name": "Smoke Test using panel version 1.1.2 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462585946298,
+            "runStarted": 1462585448000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 19,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db717d0a6f03f61a90383a",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 1.1.2 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db717d0a6f03f61a90383a"
+        },
+        {
+            "build": {
+                "buildId": "572d48540a6f03963b84e817",
+                "name": "1394"
+            },
+            "config": {
+                "configId": "55bfe8bc0a6f0374b2e379f0",
+                "name": "platform8"
+            },
+            "dateCreated": 1462585428974,
+            "files": [],
+            "id": "572d48560a6f039632838d45",
+            "name": "Smoke Test using panel version 1.1.1 against platform8",
+            "project": {
+                "id": "55bfe8bc0a6f0374b1f5568f",
+                "name": "Platform"
+            },
+            "release": {
+                "name": "2016-05-11",
+                "releaseId": "572d48530a6f03962d7d4da6"
+            },
+            "runFinished": 1462585937711,
+            "runStarted": 1462585428000,
+            "state": "FINISHED",
+            "summary": {
+                "resultsByStatus": {
+                    "BROKEN_TEST": 0,
+                    "FAIL": 1,
+                    "NOT_TESTED": 0,
+                    "NO_RESULT": 0,
+                    "PASS": 19,
+                    "SKIPPED": 0
+                },
+                "statusListOrdered": [
+                    "PASS",
+                    "FAIL"
+                ],
+                "total": 20,
+                "totalTime": 0
+            },
+            "testplan": {
+                "createdBy": "slickqa-python",
+                "id": "55db717e0a6f03f624bebc4e",
+                "isprivate": false,
+                "name": "Smoke Test using panel version 1.1.1 against platform8",
+                "project": {
+                    "id": "55bfe8bc0a6f0374b1f5568f",
+                    "name": "Platform"
+                },
+                "sharedWith": []
+            },
+            "testplanId": "55db717e0a6f03f624bebc4e"
+        }
+    ]
+}
