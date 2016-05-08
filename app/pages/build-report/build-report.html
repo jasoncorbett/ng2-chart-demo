@@ -1,13 +1,13 @@
 <ion-content padding class="build-report">
     <div class="build-report-inner">
-        <ion-row responsive-sm>
+        <ion-row responsive-sm class="build-report-header">
             <ion-col>
                 <h1>Build Report for {{project}}</h1>
                 <h2>{{release}} build {{build}}</h2>
             </ion-col>
             <ion-col text-right>
-                <span class="build-report-time">{{startTime}}</span><br />
-                <span class="build-report-time">{{endTime}}</span>
+                <span class="build-report-time">Started: {{startTime}}</span><br />
+                <span class="build-report-time">Ended: {{endTime}}</span>
             </ion-col>
         </ion-row>
         <ion-row responsive-sm class="build-report-charts">

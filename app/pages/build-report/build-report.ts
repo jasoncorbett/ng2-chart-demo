@@ -15,6 +15,7 @@ export class BuildReport {
   private endTime: string;
 
   constructor(platform: Platform) {
+    Chart.defaults.global.legend.display = false;
     if(platform.is("mobile")) {
       Chart.defaults.global.defaultFontSize = 12;
     } else {

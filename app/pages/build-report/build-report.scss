@@ -39,7 +39,19 @@
 }
 .chart {display: block; width: 100%;}
 
-.pie-chart {width: 180%; margin-left: -40%;}
+.pie-chart {margin-top: .2in; width: 180%; margin-left: -40%;}
+
+.build-report-charts {
+  margin-top: .25in;
+}
+
+.build-report-inner h1 {
+  font-size: 2.5em;
+}
+
+.build-report-header h2 {
+  margin-left: .2in;
+}
 
 .build-report-time {
   font-weight: bold;
