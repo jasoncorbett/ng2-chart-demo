@@ -68,7 +68,8 @@ gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
 gulp.task('scripts', function(options) {
     copyScripts({src: [
-        'node_modules/chart.js/dist/Chart.js'
+        'node_modules/chart.js/dist/Chart.js',
+        'node_modules/underscore/underscore.js'
     ]});
     return copyScripts(options);
 });

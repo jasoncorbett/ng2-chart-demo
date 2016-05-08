@@ -69,35 +69,35 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(255,0,0,1)',
       highlight: 'rgba(255,0,0,0.8)'
     }, {
-      backgroundColor: 'rgba(247,70,74,0.8)',
-      borderColor: 'rgba(247,70,74,1)',
+      backgroundColor: 'rgba(230,115,0,0.9)',
+      borderColor: 'rgba(153,77,0,1)',
       borderWidth: 1,
-      pointColor: 'rgba(247,70,74,1)',
+      pointColor: 'rgba(230,115,0,0.9)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(247,70,74,0.8)',
-      color: 'rgba(247,70,74,1)',
-      highlight: 'rgba(247,70,74,0.8)'
+      pointHighlightStroke: 'rgba(230,115,0,0.9)',
+      color: 'rgba(230,115,0,0.9)',
+      highlight: 'rgba(230,115,0,0.8)'
     }, {
-      backgroundColor: 'rgba(70,191,189,0.8)',
-      borderColor: 'rgba(70,191,189,1)',
+      backgroundColor: 'rgba(166,166,166,0.6)',
+      borderColor: 'rgba(150,150,150,1)',
       borderWidth: 1,
-      pointColor: 'rgba(70,191,189,1)',
+      pointColor: 'rgba(166,166,166,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(70,191,189,0.8)',
-      color: 'rgba(70,191,189,1)',
-      highlight: 'rgba(70,191,189,0.8)'
+      pointHighlightStroke: 'rgba(166,166,166,0.8)',
+      color: 'rgba(166,166,166,1)',
+      highlight: 'rgba(166,166,166,0.5)'
     }, {
-      backgroundColor: 'rgba(253,180,92,0.8)',
-      borderColor: 'rgba(253,180,92,1)',
+      backgroundColor: 'rgba(230,230,0,0.9)',
+      borderColor: 'rgba(179,179,0,1)',
       borderWidth: 1,
-      pointColor: 'rgba(253,180,92,1)',
+      pointColor: 'rgba(230,230,0,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(253,180,92,0.8)',
-      color: 'rgba(253,180,92,1)',
-      highlight: 'rgba(253,180,92,0.8)'
+      pointHighlightStroke: 'rgba(230,230,0,0.8)',
+      color: 'rgba(230,230,0,1)',
+      highlight: 'rgba(230,230,0,0.8)'
     }, {
       backgroundColor: 'rgba(148,159,177,0.8)',
       borderColor: 'rgba(148,159,177,1)',
@@ -193,11 +193,13 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
 
   public hover(evt:any):void {
     let atEvent = this.chart.getPointsAtEvent || this.chart.getBarsAtEvent || this.chart.getSegmentsAtEvent;
-    let activePoints = atEvent.call(this.chart, evt);
-    if (activePoints.length > 0) {
-      let activeLabel = activePoints[0].label;
-      let activePoint = activePoints[0].value;
-      this.chartHover.emit({activePoints: activePoints, activePoint: activePoint, activeLabel: activeLabel});
+    if (atEvent) {
+      let activePoints = atEvent.call(this.chart, evt);
+      if (activePoints.length > 0) {
+        let activeLabel = activePoints[0].label;
+        let activePoint = activePoints[0].value;
+        this.chartHover.emit({activePoints: activePoints, activePoint: activePoint, activeLabel: activeLabel});
+      }
     }
   }
 
@@ -278,7 +280,6 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     let data:any = this.getChartData(this.labels, dataset);
-    console.log(data);
     this.chart = this.getChartBuilder(this.ctx, data, this.options);
 
     if (this.legend) {

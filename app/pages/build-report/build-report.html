@@ -1,4 +1,3 @@
-<ion-content padding class="build-report">
     <div class="build-report-inner">
         <ion-row responsive-sm class="build-report-header">
             <ion-col>
@@ -25,7 +24,7 @@
                             [labels]="barChartLabels"
                             [options]="barChartOptions"
                             [series]="barChartSeries"
-                            [chartType]="barChartType"></base-chart>
+                            chartType="horizontalBar"></base-chart>
             </ion-col>
         </ion-row>
         <ion-row class="build-report-footer">
@@ -33,5 +32,4 @@
             <ion-col width-50 text-right><img src="images/slick.jpg"></ion-col>
         </ion-row>
     </div>
-</ion-content>
 

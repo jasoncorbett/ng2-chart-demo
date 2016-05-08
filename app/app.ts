@@ -1,14 +1,16 @@
 import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {BuildReport} from './pages/build-report/build-report';
+import {DashboardPage} from './pages/dashboard/dashboard';
 
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {}, // http://ionicframework.com/docs/v2/api/config/Config/
+  directives: [BuildReport]
 })
 export class MyApp {
-  rootPage: any = BuildReport;
+  rootPage: any = DashboardPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

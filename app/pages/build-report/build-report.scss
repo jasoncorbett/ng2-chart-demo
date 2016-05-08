@@ -1,11 +1,16 @@
-.build-report {
-}
-
-.build-report scroll-content {
+build-report {
+  min-height: 100%;
+  display: block;
+  position: relative;
   background-image: url("../../images/background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+.build-report {
+  min-height: 100%;
 }
 
 .chart-legend, .bar-legend, .line-legend, .pie-legend, .radar-legend, .polararea-legend, .doughnut-legend {
@@ -59,7 +64,6 @@
 }
 
 .build-report-inner {
-  position: relative;
   min-height: 100%;
   padding-bottom: .5in;
 }
