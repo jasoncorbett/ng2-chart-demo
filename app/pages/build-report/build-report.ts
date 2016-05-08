@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page, Platform} from 'ionic-angular';
 import {CHART_DIRECTIVES} from '../../charts';
 
 
@@ -11,7 +11,12 @@ export class BuildReport {
   private release: string;
   private build: string;
 
-  constructor() {
+  constructor(platform: Platform) {
+    if(platform.is("mobile")) {
+      Chart.defaults.global.defaultFontSize = 12;
+    } else {
+      Chart.defaults.global.defaultFontSize = 24;
+    }
     this.project = "Panel";
     this.release = "3.4.0";
     this.build = "17153";

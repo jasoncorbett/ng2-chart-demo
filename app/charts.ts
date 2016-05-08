@@ -49,8 +49,8 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
   private chartHover:EventEmitter<any> = new EventEmitter();
   private defaultsColours:Array<any> = [
     {
-      backgroundColor: 'rgba(0,176,0,1)',
-      borderColor: 'rgba(0,126,0,1)',
+      backgroundColor: 'rgba(0,105,0,0.9)',
+      borderColor: 'rgba(0,90,0,1)',
       borderWidth: 1,
       pointColor: 'rgba(0,176,0,1)',
       pointStrokeColor: '#fff',
@@ -59,8 +59,8 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(0,176,0,1)',
       highlight: 'rgba(0,176,0,0.8)'
     }, {
-      backgroundColor: 'rgba(255,0,0,1)',
-      borderColor: 'rgba(225,0,0,1)',
+      backgroundColor: 'rgba(140,0,0,0.9)',
+      borderColor: 'rgba(110,0,0,1)',
       borderWidth: 1,
       pointColor: 'rgba(255,0,0,1)',
       pointStrokeColor: '#fff',
