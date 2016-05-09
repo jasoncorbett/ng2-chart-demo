@@ -33,15 +33,27 @@ export class BuildReport {
   ];
 
   get project() {
-    return this.buildReportData.testruns[0].project.name;
+    if(this.buildReportData.testruns) {
+      return this.buildReportData.testruns[0].project.name;
+    } else {
+      return "";
+    }
   }
   
   get release() {
-    return this.buildReportData.testruns[0].release.name;
+    if(this.buildReportData.testruns) {
+      return this.buildReportData.testruns[0].release.name;
+    } else {
+      return "";
+    }
   }
   
   get build() {
-    return this.buildReportData.testruns[0].build.name;
+    if(this.buildReportData.testruns) {
+      return this.buildReportData.testruns[0].build.name;
+    } else {
+      return "";
+    }
   }
 
   get pieChartLabels() {
@@ -55,7 +67,9 @@ export class BuildReport {
   get pieChartData() {
     var retval: Array<number> = [];
     for(var statusName of this.statusListOrdered) {
-      retval.push(this.buildReportData.groupSummary.resultsByStatus[statusName]);
+      if(this.buildReportData.groupSummary) {
+        retval.push(this.buildReportData.groupSummary.resultsByStatus[statusName]);
+      }
     }
     if(!_.isEqual(retval, this._pieChartData)) {
       this._pieChartData = retval;
@@ -66,8 +80,10 @@ export class BuildReport {
   
   get barChartLabels() {
     var retval: Array<string> = [];
-    for(var testrun:TestrunData of this.buildReportData.testruns) {
-      retval.push(testrun.name);
+    if(this.buildReportData.testruns) {
+      for (var testrun:TestrunData of this.buildReportData.testruns) {
+        retval.push(testrun.name);
+      }
     }
     if(!_.isEqual(retval, this._barChartLabels)) {
       this._barChartLabels = retval;
@@ -79,10 +95,12 @@ export class BuildReport {
     var retval: Array<Array<number>> = [];
     for(var statusName:string of this.statusListOrdered) {
       var testrunResults: Array<number> = [];
-      for(var testrun:TestrunData of this.buildReportData.testruns) {
-        testrunResults.push(testrun.summary.resultsByStatus[statusName]);
+      if(this.buildReportData.testruns) {
+        for (var testrun:TestrunData of this.buildReportData.testruns) {
+          testrunResults.push(testrun.summary.resultsByStatus[statusName]);
+        }
+        retval.push(testrunResults);
       }
-      retval.push(testrunResults);
     }
     if(!_.isEqual(retval, this._barChartData)) {
       this._barChartData = retval;
@@ -106,14 +124,16 @@ export class BuildReport {
   }
   
   get duration() {
-    this.findStartAndEnd();
-    let totalMilliseconds = this._end - this._start;
-    let hours = Math.floor(totalMilliseconds / (60 * 60 * 1000));
-    let leftover = totalMilliseconds - (hours * (60 * 60 * 1000));
-    let minutes = Math.floor(leftover / (60 * 1000));
-    let retval = "" + hours + " hours " + minutes + " minutes";
-    if(retval !== this._duration) {
-      this._duration = retval;
+    if(this.buildReportData.testruns) {
+      this.findStartAndEnd();
+      let totalMilliseconds = this._end - this._start;
+      let hours = Math.floor(totalMilliseconds / (60 * 60 * 1000));
+      let leftover = totalMilliseconds - (hours * (60 * 60 * 1000));
+      let minutes = Math.floor(leftover / (60 * 1000));
+      let retval = "" + hours + " hours " + minutes + " minutes";
+      if (retval !== this._duration) {
+        this._duration = retval;
+      }
     }
     return this._duration;
   }
@@ -121,9 +141,11 @@ export class BuildReport {
 
   get startTime() {
     var oldest: number = new Date().getTime();
-    for(var testrun of this.buildReportData.testruns) {
-      if(testrun.runStarted < oldest) {
-        oldest = testrun.runStarted;
+    if(this.buildReportData.testruns) {
+      for (var testrun of this.buildReportData.testruns) {
+        if (testrun.runStarted < oldest) {
+          oldest = testrun.runStarted;
+        }
       }
     }
     var startTimeObj = new Date(oldest);
@@ -135,9 +157,11 @@ export class BuildReport {
 
   get endTime() {
     var newest: number = 0;
-    for(var testrun of this.buildReportData.testruns) {
-      if(testrun.runFinished > newest) {
-        newest = testrun.runFinished;
+    if(this.buildReportData.testruns) {
+      for (var testrun of this.buildReportData.testruns) {
+        if (testrun.runFinished > newest) {
+          newest = testrun.runFinished;
+        }
       }
     }
     var endTimeObj = new Date(newest);

@@ -3,7 +3,14 @@
   min-width: 100%;
 }
 
-.dashboard-page-slide .slide-zoom {
+.dashboard-page .slide-zoom {
   min-height: 100%;
   min-width: 100%;
+}
+
+.dashboard-page {
+  background-image: url("../../images/background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
