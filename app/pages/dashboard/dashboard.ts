@@ -17,8 +17,11 @@ export class DashboardPage {
         this.buildReportIndex = 0;
         var that = this;
 
-        this.fetchdata();
-        setInterval(this.fetchdata, 60000);
+        this.fetchdata(this);
+        setInterval(function() {
+            console.log("Fetching data");
+            that.fetchdata(that);
+        }, 60000);
 
         setInterval(function () {
             that.buildReportIndex++;
@@ -31,15 +34,14 @@ export class DashboardPage {
         }, 8000);
     }
 
-    fetchdata() {
+    fetchdata(that: DashboardPage) {
         let newBuildReports = [];
-        let that = this;
-        this.http.get('/config.json')
+        this.http.get('config.json?cacheKill=' + new Date().getTime())
             .subscribe(
                 function (data) {
                     let config = data.json();
                     for (let projectName in config.projects) {
-                        that.http.get(config.slickApiBaseUrl + "projects/" + projectName)
+                        that.http.get(config.slickApiBaseUrl + "projects/" + projectName + "?cacheKill=" + new Date().getTime())
                             .subscribe(function (projectResult) {
                                 let project = projectResult.json();
                                 for (let buildReportConfig of config.projects[projectName]) {
@@ -57,10 +59,9 @@ export class DashboardPage {
                                                     newestBuild = build;
                                                 }
                                             }
-                                        that.http.get(config.slickApiBaseUrl + "build-report/" + projectName + "/" + release.name + "/" + newestBuild.name)
+                                        that.http.get(config.slickApiBaseUrl + "build-report/" + projectName + "/" + release.name + "/" + newestBuild.name + "?cacheKill=" + new Date().getTime())
                                             .subscribe(function(buildReportResponse) {
                                                 newBuildReports.push(buildReportResponse.json());
-                                                console.log(newBuildReports);
                                                 that.buildReports = newBuildReports;
                                                 if(_.isEmpty(that.buildReport)) {
                                                     that.buildReport = that.buildReports[0];
@@ -79,10 +80,9 @@ export class DashboardPage {
                                                 }
                                             }
                                         }
-                                        that.http.get(config.slickApiBaseUrl + "build-report/" + projectName + "/" + release.name + "/" + build.name)
+                                        that.http.get(config.slickApiBaseUrl + "build-report/" + projectName + "/" + release.name + "/" + build.name + "?cacheKill=" + new Date().getTime())
                                             .subscribe(function(buildReportResponse) {
                                                 newBuildReports.push(buildReportResponse.json());
-                                                console.log(newBuildReports);
                                                 that.buildReports = newBuildReports;
                                                 if(_.isEmpty(that.buildReport)) {
                                                     that.buildReport = that.buildReports[0];
