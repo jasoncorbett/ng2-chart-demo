@@ -31,7 +31,7 @@ export class DashboardPage {
             if(that.buildReports.length > 0) {
                 that.buildReport = that.buildReports[that.buildReportIndex];
             }
-        }, 8000);
+        }, 15000);
     }
 
     fetchdata(that: DashboardPage) {

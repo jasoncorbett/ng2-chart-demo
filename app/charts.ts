@@ -89,15 +89,15 @@ export class BaseChartComponent implements OnInit, OnDestroy, OnChanges {
       color: 'rgba(166,166,166,1)',
       highlight: 'rgba(166,166,166,0.5)'
     }, {
-      backgroundColor: 'rgba(230,230,0,0.9)',
-      borderColor: 'rgba(179,179,0,1)',
+      backgroundColor: 'rgba(0,0,200,0.9)',
+      borderColor: 'rgba(0,0,150,1)',
       borderWidth: 1,
-      pointColor: 'rgba(230,230,0,1)',
+      pointColor: 'rgba(0,0,200,1)',
       pointStrokeColor: '#fff',
       pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(230,230,0,0.8)',
-      color: 'rgba(230,230,0,1)',
-      highlight: 'rgba(230,230,0,0.8)'
+      pointHighlightStroke: 'rgba(0,0,200,0.8)',
+      color: 'rgba(0,0,200,1)',
+      highlight: 'rgba(0,0,200,0.8)'
     }, {
       backgroundColor: 'rgba(148,159,177,0.8)',
       borderColor: 'rgba(148,159,177,1)',

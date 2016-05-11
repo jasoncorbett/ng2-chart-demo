@@ -172,7 +172,7 @@ export class BuildReport {
   }
 
   constructor(platform: Platform) {
-    Chart.defaults.global.legend.display = false;
+    //Chart.defaults.global.legend.display = false;
     if(platform.is("mobile")) {
       Chart.defaults.global.defaultFontSize = 12;
     } else {
@@ -181,7 +181,10 @@ export class BuildReport {
   }
   
   private pieChartOptions = {
-    responsive: true
+    responsive: true,
+    legend: {
+      display: false
+    }
   };
   
   private barChartOptions = {
@@ -195,7 +198,10 @@ export class BuildReport {
       }]
     },
     responsive: true,
-    stacked: true
+    stacked: true,
+    legend: {
+      position: "bottom"
+    }
   };
 
 }
